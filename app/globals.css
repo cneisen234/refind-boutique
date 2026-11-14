@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   Refind Boutique — Fairview, MI — design tokens
+   Everything here comes off the shop's own "We're currently purchasing"
+   flier, measured, not eyeballed: the olive serif "Refind", the rust
+   signature "Boutique" and its hand-drawn hearts, the warm cream paper, the
+   thin tan frames around each panel, the dry-brush olive label banners, and
+   the daisies + leaves in the corners.
+
+   Olive leads: the wordmark, headings, the brush banners, dark bands.
+   Rust is the hand: hearts, line icons, sprigs, links, small accents. It's
+   readable as text (6.8:1), but it stays the accent, never a second lead.
+   Rust never sits on olive (1.1:1); on olive, everything goes cream.
+   Tan, daisy gold and petal are drawing colors only, never text.
+   =========================================================================== */
+
+:root {
+  /* Olive — "Refind", the caps headings, the brush banners. The lead. */
+  --olive: #535129;           /* 7.5:1 on cream */
+  --olive-deep: #3e3d23;      /* hovers, the deepest band (footer) */
+  --olive-wash: #ebe4d8;      /* 10% olive into cream — badges, current tab */
+
+  /* Rust — "Boutique", the hearts, line icons, sprig bullets, phone number. */
+  --rust: #864134;            /* 6.8:1 on cream */
+  --rust-deep: #6b2821;       /* hovers */
+  --rust-wash: #f3e6dd;       /* 8% rust into cream — a soft highlight */
+  --rust-rule: #d9beb5;       /* the flier's dotted rules between list rows */
+
+  /* Paper — the flier's warm cream, and the slightly deeper panel inside
+     each tan frame. */
+  --cream: #fcf4ec;           /* page */
+  --linen: #f8f0e8;           /* panels, cards */
+
+  /* Ink — the flier's body text, and a muted olive-grey taken from the
+     daisy stems for secondary text. */
+  --ink: #292826;             /* 13.5:1 on cream */
+  --stem: #6b6550;            /* 5.2:1 on linen, 5.4:1 on cream */
+
+  /* Drawing colors — frames, flowers, leaves. Never text. */
+  --tan: #d4bfa1;             /* the thin frames around each panel */
+  --daisy: #d78f23;           /* daisy centers */
+  --petal: #fffdf9;           /* daisy petals */
+  --leaf: #756e4c;            /* leaves and stems in the corner sprays */
+
+  /* Kindling site conventions: theme (docs/site-conventions.md, in Pilot Light) */
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --surface: var(--linen);
+  --border: var(--tan);
+  --muted-foreground: var(--stem);
+  --brand: var(--olive);
+  --brand-foreground: var(--cream);   /* 7.5:1 */
+  --font-body: var(--font-catamaran);
+  --font-heading: var(--font-source-serif);
+
+  /* style — the flier is flat: thin tan frames with soft corners, no shadows */
+  --outline: var(--tan);
+  --outline-width: 1.5px;
+  --radius: 16px;
+  --radius-field: 10px;
+  --radius-button: 8px;
+  --shadow: none;
+  --shadow-button: none;
+  --brand-soft: var(--olive-wash);
+  --brand-soft-foreground: var(--olive);   /* 6.5:1 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-olive: var(--olive);
+  --color-olive-deep: var(--olive-deep);
+  --color-olive-wash: var(--olive-wash);
+  --color-rust: var(--rust);
+  --color-rust-deep: var(--rust-deep);
+  --color-rust-wash: var(--rust-wash);
+  --color-cream: var(--cream);
+  --color-linen: var(--linen);
+  --color-ink: var(--ink);
+  --color-stem: var(--stem);
+  --color-tan: var(--tan);
+
+  /* next/font variables are wired up in app/layout.tsx */
+  --font-heading: var(--font-source-serif);  /* the flier's serif caps headings */
+  --font-label: var(--font-yanone);          /* the brush-banner labels */
+  --font-body: var(--font-catamaran);        /* the flier's body text */
+}
+
+/* Tailwind v4's preflight drops the pointer cursor on buttons — put it back. */
+button:not(:disabled),
+[role="button"] {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-catamaran), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .heading {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-weight: 600;
+  color: var(--olive);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+/* The flier's headline voice: "WE'RE CURRENTLY PURCHASING", "BRANDS WE LOVE".
+   Source Serif 4 SemiBold capitals. Measured against the flier: its caps are
+   the sturdy text cut (opsz 20) at any size, not the thin display cut large
+   type would pick automatically, and 0.03em tracking matches its line width
+   to within 1%. */
+.caps {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-weight: 600;
+  font-variation-settings: "opsz" 20;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+/* The brush-banner label voice: "WHAT WE'RE LOOKING FOR". */
+.label {
+  font-family: var(--font-yanone), "Arial Narrow", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.container-x {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-x { padding-inline: 2rem; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--olive-wash);
+  color: var(--ink);
+}
+
+section[id] { scroll-margin-top: 104px; }
+
+/* ---- Actions -------------------------------------------------------------
+   The primary action is the flier's brush banner (components/Flier.tsx).
+   Secondary actions use the banner's lettering: plain text beside it, or a
+   quiet outline where a button needs a box. In the components layer so
+   Tailwind utilities (h-12, text-[…]) can still adjust a single button. */
+@layer components {
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-yanone), "Arial Narrow", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 0.85rem 1.35rem;
+  border-radius: var(--radius-button);
+  border: var(--outline-width) solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.btn-outline { border-color: var(--olive); color: var(--olive); }
+.btn-outline:hover { background: var(--olive-wash); }
+.btn-cream { background: var(--cream); color: var(--olive); }
+.btn-cream:hover { background: var(--olive-wash); }
+.btn-cream-outline { border-color: var(--cream); color: var(--cream); }
+.btn-cream-outline:hover { background: rgba(252, 244, 236, 0.12); }
+.btn-text { color: var(--olive); padding-inline: 0.75rem; }
+.btn-text:hover { color: var(--rust); }
+.btn-text svg { transition: transform 0.15s ease; }
+.btn-text:hover svg { transform: translateX(3px); }
+}
+
+.brush-link { transition: transform 0.15s ease; }
+.brush-link:hover { transform: translateY(-1px); }
+.brush-link:hover .label { text-decoration: underline; text-underline-offset: 3px; }
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--rust);
+}
+.link-arrow:hover { text-decoration: underline; text-underline-offset: 3px; }
+.link-arrow svg { transition: transform 0.15s ease; }
+.link-arrow:hover svg { transform: translateX(3px); }
+
+/* The flier's dotted rust rules between list rows (and between checkout steps). */
+.dotted-rows > li + li,
+.dotted-rows-sections > section + section { border-top: 1.5px dotted var(--rust-rule); }
+
+/* ---- Motion -------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.fade-in-up { animation: fadeInUp 0.4s ease-out both; }
+
+@keyframes lightboxIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* The hang-tag open sign settles with one small swing from its string. */
+@keyframes tagSwing {
+  0% { transform: rotate(-7deg); }
+  45% { transform: rotate(5deg); }
+  75% { transform: rotate(1.5deg); }
+  100% { transform: rotate(3deg); }
+}
+.hang-tag {
+  transform-origin: 50% 0;
+  transform: rotate(3deg);
+  animation: tagSwing 1.6s cubic-bezier(.3, .7, .3, 1) 0.3s both;
+  filter: drop-shadow(0 6px 10px rgba(41, 40, 22, 0.18));
+}
+.lightbox-in { animation: lightboxIn 0.18s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

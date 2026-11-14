@@ -1,0 +1,109 @@
+{
+  "_note": "DEMO CATALOG. A functional stand-in for the online store (the client asked for a demo that looks and works like a real store). Photos are Refind's own; the tote and POL top prices are from her old Square listings, and the tote was listed there as out of stock. Everything else (other prices, sizes, the Grocery Run markdown, the REFIND10 code) is made up for the demo.",
+  "categories": [
+    "Looks",
+    "Tops",
+    "Dresses",
+    "Bags"
+  ],
+  "products": [
+    {
+      "id": "look-pumpkin-patch",
+      "name": "The Pumpkin Patch Look",
+      "category": "Looks",
+      "priceCents": 5800,
+      "size": "M / 8",
+      "details": "Long green plaid cardigan, white top, wide-leg jeans",
+      "img": "/photos/outfit-pumpkin-patch.webp",
+      "alt": "Pumpkin Patch outfit: a long green plaid cardigan over a white top and wide-leg jeans, hung on the shop wall"
+    },
+    {
+      "id": "look-county-fair",
+      "name": "The County Fair Look",
+      "category": "Looks",
+      "priceCents": 6400,
+      "size": "S / 6",
+      "details": "Fringed vest, Nashville tee, olive corduroy flares",
+      "img": "/photos/outfit-county-fair.webp",
+      "alt": "County Fair outfit: a fringed black-and-white vest over a Nashville tee with olive corduroy flares"
+    },
+    {
+      "id": "look-coffee-with-your-bestie",
+      "name": "The Coffee With Your Bestie Look",
+      "category": "Looks",
+      "priceCents": 4600,
+      "size": "M / 10",
+      "details": "Cream peasant blouse, brown corduroy pants",
+      "img": "/photos/outfit-coffee-with-your-bestie.webp",
+      "alt": "Coffee With Your Bestie outfit: a cream peasant blouse with brown corduroy pants"
+    },
+    {
+      "id": "look-date-night",
+      "name": "The Date Night Look",
+      "category": "Looks",
+      "priceCents": 5200,
+      "size": "S / 4",
+      "details": "Floral square-neck top, cuffed wide-leg jeans",
+      "img": "/photos/outfit-date-night.webp",
+      "alt": "Date Night outfit: a floral square-neck top with cuffed wide-leg jeans"
+    },
+    {
+      "id": "look-sunday-church",
+      "name": "The Sunday Church Look",
+      "category": "Looks",
+      "priceCents": 5500,
+      "size": "L / 12",
+      "details": "Cream jacket, white top, coral floral maxi skirt",
+      "img": "/photos/outfit-sunday-church.webp",
+      "alt": "Sunday Church outfit: a cream jacket over a white top and a coral floral maxi skirt"
+    },
+    {
+      "id": "look-grocery-run",
+      "name": "The Grocery Run Look",
+      "category": "Looks",
+      "priceCents": 4000,
+      "size": "XL / 16",
+      "details": "Pink waffle-knit hoodie, sage floral pants",
+      "img": "/photos/outfit-grocery-run.webp",
+      "alt": "Grocery Run outfit: a pink waffle-knit hoodie with sage floral pants",
+      "wasCents": 4800
+    },
+    {
+      "id": "pol-lace-top",
+      "name": "POL Lace Top",
+      "category": "Tops",
+      "priceCents": 1299,
+      "size": "M",
+      "details": "Cream lace, relaxed fit",
+      "img": "/photos/product-pol-top.webp",
+      "alt": "A cream lace POL top on a hanger against the shop wall, between woven baskets and a crochet runner"
+    },
+    {
+      "id": "floral-maxi-dress",
+      "name": "Floral Patchwork Maxi Dress",
+      "category": "Dresses",
+      "priceCents": 3200,
+      "size": "S",
+      "details": "Sage and rose florals, flowy hem",
+      "img": "/photos/product-floral-maxi-dress.webp",
+      "alt": "A long patchwork floral dress in sage and rose, hung on the shop wall between woven baskets"
+    },
+    {
+      "id": "kate-spade-nylon-tote",
+      "name": "Kate Spade Nylon Tote",
+      "category": "Bags",
+      "priceCents": 3499,
+      "size": "One size",
+      "details": "Blush nylon, black handles",
+      "img": "/photos/product-kate-spade-tote.webp",
+      "alt": "A blush nylon Kate Spade tote with black handles, hung on the shop wall beside a crochet runner",
+      "sold": true
+    }
+  ],
+  "coupons": {
+    "REFIND10": {
+      "percentOff": 10,
+      "label": "10% off"
+    }
+  }
+}

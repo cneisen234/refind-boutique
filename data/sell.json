@@ -1,0 +1,41 @@
+{
+  "lookingFor": [
+    { "icon": "tee", "text": "Women’s clothing", "note": "sizes XS–XL+" },
+    { "icon": "star", "text": "Current styles & on-trend pieces" },
+    { "icon": "heart", "text": "Like-new condition", "note": "no stains, holes, or excessive wear" },
+    { "icon": "hanger", "text": "Freshly laundered" },
+    { "icon": "leaf", "text": "In-season items" },
+    { "icon": "handbag", "text": "Shoes, handbags & accessories" }
+  ],
+  "expect": [
+    "Items are reviewed during your appointment",
+    "We offer cash or store credit on the spot",
+    "Not all items will be accepted",
+    "Please bring items folded in bags or totes",
+    "No boxes, hangers, or pet hair please",
+    "30 items or less per visit"
+  ],
+  "brands": [
+    { "name": "Free People" },
+    { "name": "Anthropologie" },
+    { "name": "Madewell" },
+    { "name": "lululemon" },
+    { "name": "Aritzia" },
+    { "name": "Zara" },
+    { "name": "Urban Outfitters" },
+    { "name": "FP Movement" },
+    { "name": "POL" },
+    { "name": "aerie" },
+    { "name": "Abercrombie & Fitch" },
+    { "name": "American Eagle" },
+    { "name": "J.Crew" },
+    { "name": "Brandy Melville" },
+    { "name": "Target", "note": "select styles" },
+    { "name": "Old Navy", "note": "current styles" },
+    { "name": "Ann Taylor" },
+    { "name": "LOFT" },
+    { "name": "Chico’s" },
+    { "name": "Coach" },
+    { "name": "kate spade" }
+  ]
+}

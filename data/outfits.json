@@ -1,0 +1,11 @@
+{
+  "caption": "Coffee run, date night, girls’ day or just because you felt like getting dressed — there’s a Refind look for that.",
+  "slides": [
+    { "img": "/photos/outfit-pumpkin-patch.webp", "occasion": "Pumpkin Patch", "alt": "Pumpkin Patch outfit: a long green plaid cardigan over a white top and wide-leg jeans, hung on the shop wall" },
+    { "img": "/photos/outfit-county-fair.webp", "occasion": "County Fair", "alt": "County Fair outfit: a fringed black-and-white vest over a Nashville tee with olive corduroy flares" },
+    { "img": "/photos/outfit-coffee-with-your-bestie.webp", "occasion": "Coffee With Your Bestie", "alt": "Coffee With Your Bestie outfit: a cream peasant blouse with brown corduroy pants" },
+    { "img": "/photos/outfit-date-night.webp", "occasion": "Date Night", "alt": "Date Night outfit: a floral square-neck top with cuffed wide-leg jeans" },
+    { "img": "/photos/outfit-sunday-church.webp", "occasion": "Sunday Church", "alt": "Sunday Church outfit: a cream jacket over a white top and a coral floral maxi skirt" },
+    { "img": "/photos/outfit-grocery-run.webp", "occasion": "Grocery Run", "alt": "Grocery Run outfit: a pink waffle-knit hoodie with sage floral pants" }
+  ]
+}
